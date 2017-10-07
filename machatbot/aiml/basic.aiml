@@ -3,14 +3,23 @@
     <category>
         <pattern>HELLO</pattern>
         <template>
-            Hi there!
+            <random>
+                <li>Hi there!</li>
+                <li>Hola!</li>
+                <li>Hallo!</li>
+                <li>Greetings traveler!</li>
+            </random>
         </template>
     </category>
 
     <category>
-        <pattern>WHAT ARE YOU</pattern>
+        <pattern>MY NAME IS *</pattern>
+        <pattern>I AM</pattern>
         <template>
-            I'm an ordinary bot. But who are you?
+            <random>
+                <li>Nice to meet you <set name="name"><star/></set></li>
+                <li>Interesting name you got <set name="name"><star/></set></li>
+            </random>
         </template>
     </category>
 
