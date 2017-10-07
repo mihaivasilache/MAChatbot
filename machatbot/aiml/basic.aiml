@@ -14,7 +14,6 @@
 
     <category>
         <pattern>MY NAME IS *</pattern>
-        <pattern>I AM</pattern>
         <template>
             <random>
                 <li>Nice to meet you <set name="name"><star/></set></li>

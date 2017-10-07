@@ -18,3 +18,7 @@ else:
 
 def aiml_response(message):
     return kernel.respond(message)
+
+
+while True:
+    print(aiml_response(raw_input('[BOT CHAT]: ')))
