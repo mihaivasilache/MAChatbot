@@ -27,7 +27,7 @@
     <category>
         <pattern>MY NAME IS *</pattern>
         <template>
-               Nice to meet you <set name="user"><star/></set>
+               Nice to meet you <set name="name"><star/></set>
         </template>
     </category>
 
@@ -41,7 +41,14 @@
     <category>
         <pattern>I WORK AS *</pattern>
             <template>
-
+                That is a hard work you do as <set name="job"><star/></set>
             </template>
+    </category>
+
+    <category>
+        <pattern>I AM * YEARS OLD</pattern>
+        <template>
+            Nice <set name="age"><star/></set>
+        </template>
     </category>
 </aiml>

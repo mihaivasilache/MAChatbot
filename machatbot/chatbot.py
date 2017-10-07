@@ -8,6 +8,7 @@ brain = os.path.join(core_dir, "bot_brain.brn")
 if not os.path.exists(core_dir) and not os.path.isdir(core_dir):
     os.makedirs(core_dir)
 
+os.remove(brain)
 if os.path.isfile(brain):
     kernel.bootstrap(brainFile=brain)
 else:
