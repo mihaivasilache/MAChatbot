@@ -13,13 +13,35 @@
     </category>
 
     <category>
-        <pattern>MY NAME IS *</pattern>
+        <pattern>HI</pattern>
         <template>
             <random>
-                <li>Nice to meet you <set name="name"><star/></set></li>
-                <li>Interesting name you got <set name="name"><star/></set></li>
+                <li>Hi there!</li>
+                <li>Hola!</li>
+                <li>Hallo!</li>
+                <li>Greetings traveler!</li>
             </random>
         </template>
     </category>
 
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <template>
+               Nice to meet you <set name="user"><star/></set>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WORK AT *</pattern>
+        <template>
+            And what do you work as?
+        </template>
+    </category>
+
+    <category>
+        <pattern>I WORK AS *</pattern>
+            <template>
+
+            </template>
+    </category>
 </aiml>

@@ -21,4 +21,11 @@ def aiml_response(message):
 
 
 while True:
-    print(aiml_response(raw_input('[BOT CHAT]: ')))
+    message = raw_input('[BOT CHAT]: ')
+    if message == 'exit':
+        exit()
+    response = aiml_response(message)
+    if "WARNING: No match found for input: " in response:
+        print("I didn't catch that. Could you repeat?")
+    else:
+        print(response)
