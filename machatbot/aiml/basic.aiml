@@ -1,5 +1,7 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
+
+    <!--Greetings-->
     <category>
         <pattern>HELLO</pattern>
         <template>
@@ -24,6 +26,7 @@
         </template>
     </category>
 
+    <!--Name-->
     <category>
         <pattern>MY NAME IS *</pattern>
         <template>
@@ -31,6 +34,21 @@
         </template>
     </category>
 
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+               Nice to meet you <set name="name"><star/></set>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I'M *</pattern>
+        <template>
+               Nice to meet you <set name="name"><star/></set>
+        </template>
+    </category>
+
+    <!--Work-->
     <category>
         <pattern>I WORK AT *</pattern>
         <template>
@@ -45,10 +63,33 @@
             </template>
     </category>
 
+
+    <!--Age-->
     <category>
         <pattern>I AM * YEARS OLD</pattern>
         <template>
             Nice <set name="age"><star/></set>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I'M * YEARS OLD</pattern>
+        <template>
+            Nice <set name="age"><star/></set>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MY AGE IS *</pattern>
+        <template>
+            Nice <set name="age"><star/></set>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS MY NAME*</pattern>
+        <template>
+            <get name="name"/>
         </template>
     </category>
 </aiml>
