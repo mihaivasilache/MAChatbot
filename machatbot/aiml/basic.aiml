@@ -49,9 +49,28 @@
     </category>
 
     <category>
-        <pattern>WHAT IS MY NAME*</pattern>
+        <pattern>WHAT IS MY NAME</pattern>
         <template>
-            <get name="name"/>
+            You're <get name="name"/>.
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS MY NAME?</pattern>
+        <template>
+            Your name is <get name="name"/>.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHATS MY NAME</pattern>
+        <template>
+            You're <get name="name"/>.
+        </template>
+    </category>
+    <category>
+        <pattern>WHATS MY NAME?</pattern>
+        <template>
+            Your name is <get name="name"/>.
         </template>
     </category>
 
