@@ -48,11 +48,18 @@
         </template>
     </category>
 
+    <category>
+        <pattern>WHAT IS MY NAME*</pattern>
+        <template>
+            <get name="name"/>
+        </template>
+    </category>
+
     <!--Work-->
     <category>
         <pattern>I WORK AT *</pattern>
         <template>
-            And what do you work as?
+            And as what do you work at <set name="workplace"><star/></set>?
         </template>
     </category>
 
@@ -63,6 +70,19 @@
             </template>
     </category>
 
+    <category>
+        <pattern>WHERE DO I WORK?</pattern>
+        <template>
+            You work at <get name="workplace"/>.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS MY POSITION?</pattern>
+        <template>
+            You work as a <get name="job"/>
+        </template>
+    </category>
 
     <!--Age-->
     <category>
@@ -87,9 +107,30 @@
     </category>
 
     <category>
-        <pattern>WHAT IS MY NAME*</pattern>
+        <pattern>HOW OLD AM I?</pattern>
         <template>
-            <get name="name"/>
+            You are <get name="age"/> years old.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS MY AGE</pattern>
+        <template>
+            You are <get name="age"/> years old.
+        </template>
+    </category>
+
+    <!--Farewell-->
+    <category>
+        <pattern>GOODBYE</pattern>
+        <template>
+            <random>
+                <li>Bye!</li>
+                <li>Goodbye!</li>
+                <li>Farewell</li>
+                <li>It was nice talking to you!</li>
+                <li>See you!</li>
+            </random>
         </template>
     </category>
 </aiml>
