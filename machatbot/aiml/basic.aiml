@@ -1,0 +1,17 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Hi there!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm an ordinary bot. But who are you?
+        </template>
+    </category>
+
+</aiml>
