@@ -17,12 +17,7 @@
     <category>
         <pattern>HI</pattern>
         <template>
-            <random>
-                <li>Hi there!</li>
-                <li>Hola!</li>
-                <li>Hallo!</li>
-                <li>Greetings traveler!</li>
-            </random>
+            <srai>HELLO</srai>
         </template>
     </category>
 
