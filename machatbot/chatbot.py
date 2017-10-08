@@ -74,13 +74,13 @@ def process_response(answer):
     :param answer: aiml response
     """
     # print(answer)
-    # print("answer: {} |{}|".format(len(answer), answer))
+    print("answer: {} |{}|".format(len(answer), answer))
 
     text_split = answer.split('|')
     for index in range(len(text_split)):
         # executes everything between `exec(` and `)`
         if text_split[index].startswith('exec('):
-            text_split[index] = exec(text_split[index][5:-1])
+            text_split[index] = eval(text_split[index][5:-1])
 
     answer = "".join(text_split)
     print(bot_str + answer)

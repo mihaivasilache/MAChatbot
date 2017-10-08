@@ -114,21 +114,21 @@
     <category>
         <pattern>I'M * YEARS OLD</pattern>
         <template>
-            Nice <set name="age"><star/></set>
+            Good that you are <set name="age"><star/></set> years old.
         </template>
     </category>
 
     <category>
         <pattern>MY AGE IS *</pattern>
         <template>
-            Nice <set name="age"><star/></set>
+            Good that you are <set name="age"><star/></set> years old.
         </template>
     </category>
 
     <category>
         <pattern>HOW OLD AM I?</pattern>
         <template>
-            You are <get name="age"/> years old.
+            Good that you are <set name="age"><star/></set> years old.
         </template>
     </category>
 
