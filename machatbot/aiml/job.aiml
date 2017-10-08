@@ -1,0 +1,33 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>question 1</pattern>
+        <template>
+            <condition name="job" value="doctor">
+                In what field do you specialize as a <get name="job"/>?
+            </condition>
+            <condition name="job" value="professor">
+                What grade to you teach?
+            </condition>
+            <condition name="job" value="student">
+                At what faculty do you study?
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>question 2</pattern>
+        <template>
+            <condition name="job" value="doctor">
+                How many patients did you have today <get name="job"/> <get name="name"/>?
+            </condition>
+            <condition name="job" value="professor">
+                How many students do you have?
+            </condition>
+             <condition name="job" value="student">
+                What grade did you get at your last test?
+            </condition>
+        </template>
+    </category>
+
+</aiml>
