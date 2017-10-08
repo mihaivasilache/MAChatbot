@@ -5,8 +5,10 @@ import random
 
 if sys.version_info[0] == 3:
     get_text = input
+    execute = exec
 else:
     get_text = raw_input
+    execute = eval
 
 # used constants
 caller_fmt = '[{}]: '
@@ -80,7 +82,7 @@ def process_response(answer):
     for index in range(len(text_split)):
         # executes everything between `exec(` and `)`
         if text_split[index].startswith('exec('):
-            text_split[index] = eval(text_split[index][5:-1])
+            text_split[index] = execute(text_split[index][5:-1])
 
     answer = "".join(text_split)
     print(bot_str + answer)
