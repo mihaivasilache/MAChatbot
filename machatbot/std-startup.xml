@@ -12,6 +12,8 @@
         <!-- This learn an aiml file_name -->
         <template>
             <learn>./aiml/basic.aiml</learn>
+            <learn>./aiml/job.aiml</learn>
+            <learn>./aiml/age.aiml</learn>
         </template>
         
     </category>
