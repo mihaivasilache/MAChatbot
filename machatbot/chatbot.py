@@ -31,7 +31,7 @@ kernel = aiml.Kernel()
 kernel.setPredicate("name", unknown, current_session_id)
 aiml_dir = os.path.join(os.path.dirname(__file__), "aiml")
 core_dir = os.path.join(os.path.dirname(__file__), "core")
-users_dir = os.path.join(os.path.dirname(__file__), "users")
+users_file = os.path.join(core_dir, "users")
 brain = os.path.join(core_dir, "bot_brain.brn")
 if not os.path.exists(core_dir) and not os.path.isdir(core_dir):
     os.makedirs(core_dir)
@@ -49,11 +49,11 @@ def init_brain():
 
 def init_users():
     global users
-    if not os.path.exists(users_dir):
-        with open(users_dir, "w") as f:
+    if not os.path.exists(users_file):
+        with open(users_file, "w") as f:
             json.dump(dict(), f)
     else:
-        with open(users_dir) as f:
+        with open(users_file) as f:
             try:
                 data = json.loads(f.read())
                 users = data
@@ -140,6 +140,10 @@ def process_response(answer):
     print(bot_str + answer)
 
 
+def process_age(age):
+    pass
+
+
 if __name__ == '__main__':
     if os.path.exists(brain):
         os.remove(brain)
@@ -161,5 +165,5 @@ if __name__ == '__main__':
             # update_session()
             process_response(response)
 
-    with open(users_dir, "w") as f:
+    with open(users_file, "w") as f:
         json.dump(users, f)
