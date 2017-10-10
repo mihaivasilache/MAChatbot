@@ -103,8 +103,12 @@ def update_session():
     caller = caller_fmt.format(name)
     if name not in users:
         users[name] = dict()
+        kernel.setPredicate("job", None)
+        kernel.setPredicate("age", None)
     elif name != current_user:
         current_user = name
+        kernel.setPredicate("job", users[current_user].get("job", None))
+        kernel.setPredicate("age", users[current_user].get("age", None))
         return
     job = get("job")
     if job and job != users[name].get("job", ""):
