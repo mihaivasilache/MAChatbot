@@ -102,24 +102,18 @@ def update_session():
         return
     caller = caller_fmt.format(name)
     if name not in users:
-        kernel.setPredicate("job", None)
-        kernel.setPredicate("age", None)
         users[name] = dict()
     elif name != current_user:
         current_user = name
         return
     job = get("job")
-    if job != users[name].get("job", ""):
+    if job and job != users[name].get("job", ""):
         users[name]["job"] = job
     age = get("age")
     print("Age: ", age)
-    if age != users[name].get("age", ""):
-        users[name]["age"] = job
+    if age and age != users[name].get("age", ""):
+        users[name]["age"] = age
     print(users)
-    # if name not in sessions:
-    #     sessions[name] = kernel.getSessionData(name)
-    # if sessions[name] != current_session_id:
-    #     current_session_id = sessions[name]
 
 
 def process_response(answer):
@@ -148,6 +142,7 @@ if __name__ == '__main__':
     if os.path.exists(brain):
         os.remove(brain)
     init_brain()
+    init_users()
 
     while True:
         message = get_text(caller)
@@ -162,8 +157,8 @@ if __name__ == '__main__':
         if not response:
             print("I didn't catch that. Could you repeat?")
         else:
-            # update_session()
+            update_session()
             process_response(response)
 
-    with open(users_file, "w") as f:
-        json.dump(users, f)
+    with open(users_file, "w") as out:
+        json.dump(users, out)
