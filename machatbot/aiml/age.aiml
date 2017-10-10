@@ -1,20 +1,23 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
-        <category>
+    <category>
         <pattern>question 3</pattern>
         <template>
-            <condition name="age" value=''>
-
-            </condition>
+            Where do you study?
         </template>
     </category>
 
     <category>
         <pattern>question 4</pattern>
         <template>
-            <condition name="age" value=''>
+            Where do you work?
+        </template>
+    </category>
 
-            </condition>
+    <category>
+        <pattern>question 5</pattern>
+        <template>
+            Where would you like to travel?
         </template>
     </category>
 
