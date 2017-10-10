@@ -99,16 +99,17 @@ def update_session():
     global caller, caller_fmt, current_user, users
     name = get("name")
     if not name:
+        print(name)
         return
     caller = caller_fmt.format(name)
     if name not in users:
         users[name] = dict()
-        kernel.setPredicate("job", None)
-        kernel.setPredicate("age", None)
+        kernel.setPredicate("job", '')
+        kernel.setPredicate("age", '')
     elif name != current_user:
         current_user = name
-        kernel.setPredicate("job", users[current_user].get("job", None))
-        kernel.setPredicate("age", users[current_user].get("age", None))
+        kernel.setPredicate("job", users[current_user].get("job", ''))
+        kernel.setPredicate("age", users[current_user].get("age", ''))
         return
     job = get("job")
     if job and job != users[name].get("job", ""):
@@ -126,7 +127,7 @@ def process_response(answer):
     :param answer: aiml response
     """
     # print(answer)
-    print("answer: {} |{}|".format(len(answer), answer))
+    #print("answer: {} |{}|".format(len(answer), answer))
 
     text_split = answer.split('|')
     for index in range(len(text_split)):

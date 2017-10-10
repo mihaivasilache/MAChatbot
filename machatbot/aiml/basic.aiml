@@ -78,7 +78,7 @@
     </category>
 
     <category>
-        <pattern>I WORK AS *</pattern>
+        <pattern>I WORK AS A *</pattern>
             <template>
                 That is a hard work you do as <set name="job"><star/></set>
             </template>
