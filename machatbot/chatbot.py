@@ -7,6 +7,7 @@ import sys
 import aiml
 import json
 import random
+import threading
 
 
 if sys.version_info[0] == 3:
@@ -61,10 +62,6 @@ def init_users():
                 print("Failed to import users data..")
 
 
-def update_users():
-    pass
-
-
 def get_new_session_id(upper_limit=100000):
     sessions_list = sessions.values()
     rand_session = random.randint(1, upper_limit)
@@ -104,12 +101,12 @@ def update_session():
     caller = caller_fmt.format(name)
     if name not in users:
         users[name] = dict()
-        kernel.setPredicate("job", '')
-        kernel.setPredicate("age", '')
+        kernel.setPredicate("job", "")
+        kernel.setPredicate("age", "")
     elif name != current_user:
         current_user = name
-        kernel.setPredicate("job", users[current_user].get("job", ''))
-        kernel.setPredicate("age", users[current_user].get("age", ''))
+        kernel.setPredicate("job", users[current_user].get("job", ""))
+        kernel.setPredicate("age", users[current_user].get("age", ""))
         return
     job = get("job")
     if job and job != users[name].get("job", ""):
@@ -127,7 +124,7 @@ def process_response(answer):
     :param answer: aiml response
     """
     # print(answer)
-    #print("answer: {} |{}|".format(len(answer), answer))
+    # print("answer: {} |{}|".format(len(answer), answer))
 
     text_split = answer.split('|')
     for index in range(len(text_split)):

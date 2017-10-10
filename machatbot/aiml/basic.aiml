@@ -1,6 +1,5 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
-
     <!--Greetings-->
     <category>
         <pattern>HELLO</pattern>
@@ -13,7 +12,6 @@
             </random>
         </template>
     </category>
-
     <category>
         <pattern>HI</pattern>
         <template>
@@ -28,44 +26,51 @@
                Nice to meet you <set name="name"><star/></set>
         </template>
     </category>
-
     <category>
         <pattern>I AM *</pattern>
         <template>
-               Nice to meet you <set name="name"><star/></set>
+            <srai>MY NAME IS <star/></srai>
         </template>
     </category>
-
     <category>
         <pattern>I'M *</pattern>
         <template>
-               Nice to meet you <set name="name"><star/></set>
+               <srai>MY NAME IS <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>YOU CAN CALL ME *</pattern>
+        <template>
+               <srai>MY NAME IS <star/></srai>
         </template>
     </category>
 
     <category>
         <pattern>WHAT IS MY NAME</pattern>
         <template>
-            You're <get name="name"/>.
+            <random>
+                <li>You are <get name="name"/>.</li>
+                <li>You're <get name="name"/>.</li>
+                <li>Your name is <get name="name"/>.</li>
+            </random>
         </template>
     </category>
     <category>
         <pattern>WHAT IS MY NAME?</pattern>
         <template>
-            Your name is <get name="name"/>.
+            <srai>WHAT IS MY NAME</srai>
         </template>
     </category>
-
     <category>
         <pattern>WHATS MY NAME</pattern>
         <template>
-            You're <get name="name"/>.
+            <srai>WHAT IS MY NAME</srai>
         </template>
     </category>
     <category>
         <pattern>WHATS MY NAME?</pattern>
         <template>
-            Your name is <get name="name"/>.
+            <srai>WHAT IS MY NAME</srai>
         </template>
     </category>
 
@@ -102,21 +107,22 @@
     <category>
         <pattern>I AM * YEARS OLD</pattern>
         <template>
-            Nice <set name="age"><star/></set>
+            <random>
+                <li>Nice <set name="age"><star/></set></li>
+                <li>Good that you are <set name="age"><star/></set> years old.</li>
+            </random>
         </template>
     </category>
-
     <category>
         <pattern>I'M * YEARS OLD</pattern>
         <template>
-            Good that you are <set name="age"><star/></set> years old.
+            <srai>I AM <star/> YEARS OLD</srai>
         </template>
     </category>
-
     <category>
         <pattern>MY AGE IS *</pattern>
         <template>
-            Good that you are <set name="age"><star/></set> years old.
+            <srai>I AM <star/> YEARS OLD</srai>
         </template>
     </category>
 
@@ -145,6 +151,12 @@
                 <li>It was nice talking to you!</li>
                 <li>See you!</li>
             </random>
+        </template>
+    </category>
+    <category>
+        <pattern>BYE*</pattern>
+        <template>
+            <srai>GOODBYE<star/></srai>
         </template>
     </category>
 </aiml>
