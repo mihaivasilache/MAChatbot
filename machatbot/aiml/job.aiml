@@ -41,14 +41,12 @@
     <category>
         <pattern>* HOSPITAL *</pattern>
         <template>
-            <condition name="job" value="doctor">
                 <random>
                     <li>At what hospital do you work?</li>
                     <li>Do you like working in that hospital?</li>
                     <li>What do you like to do at that hospital?</li>
                     <li>Why do you work at that hospital?</li>
                 </random>
-            </condition>
         </template>
     </category>
     <category>
@@ -58,14 +56,12 @@
     <category>
         <pattern>* MEDIC *</pattern>
         <template>
-            <condition name="job" value="doctor">
                 <random>
                     <li>How important is that in what you do or want to do?</li>
                     <li>What made you choose that path?</li>
                     <li>How many hours do you work a week?</li>
                     <li>Do you have time for other things, other than what you do?</li>
                 </random>
-            </condition>
         </template>
     </category>
     <category>
@@ -77,7 +73,6 @@
     <category>
         <pattern>* TEACH *</pattern>
         <template>
-            <condition name="job" value="professor">
                 <random>
                     <li>How are you able to teach to a lot of children?</li>
                     <li>What made you wonder into the teaching world?</li>
@@ -86,7 +81,6 @@
                     <li>Would you recommend to others to become a teacher?</li>
                     <li>What special abilities do you think a teacher should have?</li>
                 </random>
-            </condition>
         </template>
     </category>
     <category>
@@ -97,13 +91,11 @@
     <category>
         <pattern>* CHILD *</pattern>
         <template>
-            <condition name="job" value="professor">
                 <random>
                     <li>So you like working with children?</li>
                     <li>I know a teacher should teach, but do you ever learn anything from children?</li>
                     <li>How long have you worked with children?</li>
                 </random>
-            </condition>
         </template>
     </category>
 
@@ -111,14 +103,12 @@
     <category>
         <pattern>* FACULTY *</pattern>
         <template>
-            <condition name="job" value="student">
                 <random>
                     <li>So what is your opinion about the faculty you go to?</li>
                     <li>Have you learned anything interesting at that faculty so far?</li>
                     <li>What further expectations to you from that faculty?</li>
                     <li>How do they grade your work at that faculty?</li>
                 </random>
-            </condition>
         </template>
     </category>
     <category>
@@ -129,7 +119,6 @@
     <category>
         <pattern>* SUBJECT *</pattern>
         <template>
-            <condition name="job" value="student">
                 <random>
                     <li>What is your favourite subject?</li>
                     <li>Is there something else you like in particular about that subject?</li>
@@ -137,7 +126,6 @@
                     <li>Is there something else you would like to do regarding that subject?</li>
                     <li>What would you like to do next?</li>
                 </random>
-            </condition>
         </template>
     </category>
     <category>
@@ -148,12 +136,10 @@
     <category>
         <pattern>* GRADE *</pattern>
         <template>
-            <condition name="job" value="student">
                 <random>
                     <li>Is hard to get good grades at your faculty?</li>
                     <li>Do you learn because you like to learn or to get passing grades?</li>
                 </random>
-            </condition>
         </template>
     </category>
 </aiml>

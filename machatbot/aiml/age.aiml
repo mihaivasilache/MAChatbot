@@ -23,10 +23,40 @@
     </category>
 
     <category>
-        <pattern>* OLD *</pattern>
+        <pattern>* FAMILY *</pattern>
+        <template>
+            |exec(process_age(26, 64))|
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FRIENDS *</pattern>
         <template>
             |exec(process_age(0, 25))|
         </template>
+    </category>
+    <category>
+        <pattern>* FRIENDS</pattern>
+        <template><srai><star/> FRIENDS <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* SCHOOL *</pattern>
+        <template><srai><star/> FRIENDS <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* SCHOOL</pattern>
+        <template><srai><star/> FRIENDS <star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>* VERY OLD</pattern>
+        <template>
+            |exec(process_age(65, 100))|
+        </template>
+    </category>
+    <category>
+        <pattern>* VERY OLD *</pattern>
+        <template><srai><star/> VERY OLD</srai></template>
     </category>
 
     <category>
@@ -35,7 +65,7 @@
             <random>
                 <li>Do where do you study?</li>
                 <li>Do you like what you study?</li>
-                <li>How did you chose your faculty?</li>
+                <li>How did you choose your faculty?</li>
                 <li>Do you have a driver's license?</li>
                 <li>Are you old enough to drive a car?</li>
             </random>
