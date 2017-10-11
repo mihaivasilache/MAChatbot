@@ -24,33 +24,25 @@
         <pattern>MY NAME IS *</pattern>
         <template>
             Nice to meet you
-            <set name="name">
-                <star/>
-            </set>
+            <set name="name"> <star/></set>
         </template>
     </category>
     <category>
         <pattern>I AM *</pattern>
         <template>
-            <srai>MY NAME IS
-                <star/>
-            </srai>
+            <srai>MY NAME IS <star/></srai>
         </template>
     </category>
     <category>
         <pattern>I'M *</pattern>
         <template>
-            <srai>MY NAME IS
-                <star/>
-            </srai>
+            <srai>MY NAME IS <star/></srai>
         </template>
     </category>
     <category>
         <pattern>YOU CAN CALL ME *</pattern>
         <template>
-            <srai>MY NAME IS
-                <star/>
-            </srai>
+            <srai>MY NAME IS <star/></srai>
         </template>
     </category>
 
@@ -58,12 +50,9 @@
         <pattern>WHAT IS MY NAME</pattern>
         <template>
             <random>
-                <li>You are<get name="name"/>.
-                </li>
-                <li>You're<get name="name"/>.
-                </li>
-                <li>Your name is<get name="name"/>.
-                </li>
+                <li>You are<get name="name"/>.</li>
+                <li>You're<get name="name"/>.</li>
+                <li>Your name is<get name="name"/>.</li>
             </random>
         </template>
     </category>
@@ -154,7 +143,7 @@
 
     <!--Farewell-->
     <category>
-        <pattern>GOODBYE*</pattern>
+        <pattern>GOODBYE</pattern>
         <template>
             <random>
                 <li>Bye!</li>
@@ -166,7 +155,7 @@
         </template>
     </category>
     <category>
-        <pattern>BYE*</pattern>
+        <pattern>BYE</pattern>
         <template>
             <srai>GOODBYE<star/></srai>
         </template>
