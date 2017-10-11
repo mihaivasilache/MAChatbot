@@ -33,7 +33,37 @@
         <pattern>AGE BETWEEN 0 AND 25</pattern>
         <template>
             <random>
-                <li>I am too young too die?</li>
+                <li>Do where do you study?</li>
+                <li>Do you like what you study?</li>
+                <li>How did you chose your faculty?</li>
+                <li>Do you have a driver's license?</li>
+                <li>Are you old enough to drive a car?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>AGE BETWEEN 26 AND 64</pattern>
+        <template>
+            <random>
+                <li>Where do you work?</li>
+                <li>Do you have any kids?</li>
+                <li>Would you like to have kids?</li>
+                <li>Are you married?</li>
+                <li>Do you visit your parents often?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>AGE BETWEEN 65 AND 100</pattern>
+        <template>
+            <random>
+                <li>Are you retired?</li>
+                <li>Are you happy with your life?</li>
+                <li>Do you have any grandchildren?</li>
+                <li>Are you healthy?</li>
+                <li>What are your hobbies?</li>
             </random>
         </template>
     </category>
