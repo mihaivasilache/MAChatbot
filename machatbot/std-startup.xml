@@ -15,6 +15,7 @@
             <learn>./aiml/basic.aiml</learn>
             <learn>./aiml/job.aiml</learn>
             <learn>./aiml/age.aiml</learn>
+            <learn>./aiml/learn.aiml</learn>
         </template>
         
     </category>

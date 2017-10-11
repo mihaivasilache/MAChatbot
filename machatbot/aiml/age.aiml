@@ -23,13 +23,6 @@
     </category>
 
     <category>
-        <pattern>* FAMILY *</pattern>
-        <template>
-            |exec(process_age(26, 64))|
-        </template>
-    </category>
-
-    <category>
         <pattern>* FRIENDS *</pattern>
         <template>
             |exec(process_age(0, 25))|
@@ -47,6 +40,29 @@
         <pattern>* SCHOOL</pattern>
         <template><srai><star/> FRIENDS <star/></srai></template>
     </category>
+    <category>
+        <pattern>* EXCITE *</pattern>
+        <template><srai><star/> FRIENDS <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* EXCITED</pattern>
+        <template><srai><star/> FRIENDS <star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>* FAMILY *</pattern>
+        <template>
+            |exec(process_age(26, 64))|
+        </template>
+    </category>
+    <category>
+        <pattern>* CAREER *</pattern>
+        <template><srai><star/> FAMILY <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* CAREER *</pattern>
+        <template><srai><star/> FAMILY <star/></srai></template>
+    </category>
 
     <category>
         <pattern>* VERY OLD</pattern>
@@ -56,6 +72,14 @@
     </category>
     <category>
         <pattern>* VERY OLD *</pattern>
+        <template><srai><star/> VERY OLD</srai></template>
+    </category>
+    <category>
+        <pattern>* RETIRED *</pattern>
+        <template><srai><star/> VERY OLD</srai></template>
+    </category>
+    <category>
+        <pattern>* HEALTH *</pattern>
         <template><srai><star/> VERY OLD</srai></template>
     </category>
 
@@ -68,6 +92,9 @@
                 <li>How did you choose your faculty?</li>
                 <li>Do you have a driver's license?</li>
                 <li>Are you old enough to drive a car?</li>
+                <li>Are you excited about anything?</li>
+                <li>What is that thing or things you do with pleasure?</li>
+                <li>What do you want to do in life?</li>
             </random>
         </template>
     </category>
@@ -81,6 +108,12 @@
                 <li>Would you like to have kids?</li>
                 <li>Are you married?</li>
                 <li>Do you visit your parents often?</li>
+                <li>How is your career going?</li>
+                <li>Do you have or want to have a family in the near future?</li>
+                <li>Do you have kids or would like to have any?</li>
+                <li>Where do you work or what do you do for a living?</li>
+                <li>Do you cling to any tradition?</li>
+                <li>What do you do in your free time?</li>
             </random>
         </template>
     </category>
@@ -93,7 +126,10 @@
                 <li>Are you happy with your life?</li>
                 <li>Do you have any grandchildren?</li>
                 <li>Are you healthy?</li>
-                <li>What are your hobbies?</li>
+                <li>Do you have any hobbies?</li>
+                <li>Are you satisfied with how things worked out until now?</li>
+                <li>What do you like to do the most?</li>
+                <li>What are the family and friends doing?</li>
             </random>
         </template>
     </category>

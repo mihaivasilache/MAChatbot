@@ -23,8 +23,12 @@
     <category>
         <pattern>MY NAME IS *</pattern>
         <template>
-            Nice to meet you
-            <set name="name"> <star/></set>
+            <random>
+                <li>Nice to meet you <set name="name"><star/></set></li>
+                <li>It is a pleasure to meet you, <set name="name"><star/></set></li>
+                <li>Hi <set name="name"><star/></set>, tell me something about yourself, like where do you work, what you like to do..</li>
+                <li>Hi <set name="name"><star/></set>. Please tell me more about you.</li>
+            </random>
         </template>
     </category>
     <category>
@@ -50,14 +54,14 @@
         <pattern>WHAT IS MY NAME</pattern>
         <template>
             <random>
-                <li>You are<get name="name"/>.</li>
-                <li>You're<get name="name"/>.</li>
-                <li>Your name is<get name="name"/>.</li>
+                <li>You are <get name="name"/>.</li>
+                <li>You're <get name="name"/>.</li>
+                <li>Your name is <get name="name"/>.</li>
             </random>
         </template>
     </category>
     <category>
-        <pattern>WHAT IS MY NAME?</pattern>
+        <pattern>WHAT'S MY NAME?</pattern>
         <template>
             <srai>WHAT IS MY NAME</srai>
         </template>
@@ -74,6 +78,12 @@
             <srai>WHAT IS MY NAME</srai>
         </template>
     </category>
+    <category>
+        <pattern>WHO AM I</pattern>
+        <template>
+            <srai>WHAT IS MY NAME</srai>
+        </template>
+    </category>
 
     <!--Work-->
     <category>
@@ -82,11 +92,31 @@
             And as what do you work at <set name="workplace"><star/></set>?
         </template>
     </category>
-
     <category>
         <pattern>I WORK AS A *</pattern>
         <template>
-            That is a hard work you do as <set name="job"><star/></set>
+            <random>
+                <li>That is a hard work you do as <set name="job"><star/></set></li>
+                <li></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>MY JOB IS *</pattern>
+        <template>
+            <srai>I WORK AS A <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I MAKE A LIVING AS A *</pattern>
+        <template>
+            <srai>I WORK AS A <star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>I EARN MONEY AS A *</pattern>
+        <template>
+            <srai>I WORK AS A <star/></srai>
         </template>
     </category>
 
@@ -100,8 +130,16 @@
     <category>
         <pattern>WHAT IS MY POSITION</pattern>
         <template>
-            You work as a <get name="job"/>.
+            <random>
+                <li>You work as a <get name="job"/>.</li>
+                <li>Your job is <get name="job"/>.</li>
+                <li>You make a living as a <get name="job"/>.</li>
+            </random>
         </template>
+    </category>
+    <category>
+        <pattern>WHAT IS MY JOB</pattern>
+        <template><srai>WHAT IS MY POSITION</srai></template>
     </category>
 
     <!--Age-->
@@ -116,6 +154,12 @@
     </category>
     <category>
         <pattern>I'M * YEARS OLD</pattern>
+        <template>
+            <srai>I AM <star/> YEARS OLD</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>IM * YEARS OLD</pattern>
         <template>
             <srai>I AM <star/> YEARS OLD</srai>
         </template>
@@ -140,6 +184,14 @@
         <pattern>WHAT IS MY AGE</pattern>
         <template><srai>HOW OLD AM I</srai></template>
     </category>
+    <category>
+        <pattern>WHAT'S MY AGE</pattern>
+        <template><srai>HOW OLD AM I</srai></template>
+    </category>
+    <category>
+        <pattern>WHATS MY AGE</pattern>
+        <template><srai>HOW OLD AM I</srai></template>
+    </category>
 
     <!--Farewell-->
     <category>
@@ -158,6 +210,25 @@
         <pattern>BYE</pattern>
         <template>
             <srai>GOODBYE<star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>SEE YOU</pattern>
+        <template>
+            <srai>GOODBYE<star/></srai>
+        </template>
+    </category>
+    <category>
+        <pattern>BYE *</pattern>
+        <template>
+            <srai>GOODBYE<star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>EXEC *</pattern>
+        <template>
+            |exec(<star/>)|
         </template>
     </category>
 </aiml>

@@ -37,6 +37,32 @@
         </template>
     </category>
 
+    <category>
+        <pattern>* JOB *</pattern>
+        <template>
+            <random>
+                <li>What are the responsibilities and accountabilities of this position?</li>
+                <li>Please describe an average day on this job.</li>
+                <li>What is the history of the position? Why is it vacant?</li>
+                <li>What aspects of this job would you like to see performed better?</li>
+                <li>What are the key challenges or problems of this position?</li>
+                <li>What do you most enjoy about your work with this organization / company / agency?</li>
+                <li>What are the various ways employees communicate with one another to carry out their work?</li>
+                <li>How will the responsibilities and performance of the role be measured?</li>
+                <li>Could you describe your company's management style and the type of employee who fits well with it?</li>
+                <li>What is the company's policy on providing seminars, workshops, and training so employees can keep up their skills or acquire new ones?</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>* LIKE * WORK *</pattern>
+        <template><srai><star/> JOB <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* DO * JOB *</pattern>
+        <template><srai><star/> JOB <star/></srai></template>
+    </category>
+
 
     <category>
         <pattern>* HOSPITAL *</pattern>
@@ -68,6 +94,14 @@
         <pattern>* DOCTOR *</pattern>
         <template><srai><star/> MEDIC <star/></srai></template>
     </category>
+    <category>
+        <pattern>* SPECIALIZATION *</pattern>
+        <template><srai><star/> MEDIC <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* SICK * WORK *</pattern>
+        <template><srai><star/> MEDIC <star/></srai></template>
+    </category>
 
 
     <category>
@@ -85,6 +119,10 @@
     </category>
     <category>
         <pattern>* PROF *</pattern>
+        <template><srai><star/> TEACH <star/></srai></template>
+    </category>
+    <category>
+        <pattern>* CHILDREN * LEARN *</pattern>
         <template><srai><star/> TEACH <star/></srai></template>
     </category>
 
@@ -106,7 +144,7 @@
                 <random>
                     <li>So what is your opinion about the faculty you go to?</li>
                     <li>Have you learned anything interesting at that faculty so far?</li>
-                    <li>What further expectations to you from that faculty?</li>
+                    <li>What further expectations do you have from that faculty?</li>
                     <li>How do they grade your work at that faculty?</li>
                 </random>
         </template>
@@ -132,6 +170,10 @@
         <pattern>* THEME *</pattern>
         <template><srai><star/> SUBJECT <star/></srai></template>
     </category>
+    <category>
+        <pattern>* HOMEWORK *</pattern>
+        <template><srai><star/> SUBJECT <star/></srai></template>
+    </category>
 
     <category>
         <pattern>* GRADE *</pattern>
@@ -141,5 +183,9 @@
                     <li>Do you learn because you like to learn or to get passing grades?</li>
                 </random>
         </template>
+    </category>
+    <category>
+        <pattern>* GRADES *</pattern>
+        <template><srai><star/> GRADE <star/></srai></template>
     </category>
 </aiml>
