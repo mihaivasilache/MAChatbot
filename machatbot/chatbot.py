@@ -46,6 +46,8 @@ def init_brain():
         #     kernel.learn(os.path.join(aiml_dir, file_name))
         kernel.bootstrap(learnFiles="std-startup.xml", commands="load aiml b")
         kernel.saveBrain(brain)
+    print("Learned patterns: ")
+    kernel._brain.dump()
 
 
 def init_users():
@@ -60,6 +62,30 @@ def init_users():
                 users = data
             except Exception:
                 print("Failed to import users data..")
+
+
+def import_bot_data(file_name=None, bot=None, all_files=False):
+    """
+    Loads aiml file and learns from it
+    :param file_name: the file name from the predefined aiml files from python-aiml
+    :param bot: can be either "alice" or "standard"
+    :param all_files: if its True it will import all files from bot
+    """
+    if not file_name and not bot or not bot and not all_files:
+        raise ValueError("No bot or file given")
+    if bot:
+        bot = bot.lower()
+        if bot not in ["alice", "standard"]:
+            raise NameError("Unavailable bot data found")
+    file_path = file_name
+    if bot and isinstance(bot, str):
+        file_path = os.path.join(bot, file_path) if file_path else bot
+    file_path = os.path.join(aiml.__path__[0], 'botdata', file_path)
+    if not all_files:
+        kernel.learn(file_path)
+    else:
+        kernel.bootstrap(learnFiles="startup.xml", commands="load {}".format(bot),
+                         chdir=file_path)
 
 
 def get_new_session_id(upper_limit=100000):

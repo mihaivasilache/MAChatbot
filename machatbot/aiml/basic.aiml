@@ -1,5 +1,5 @@
-<aiml version="1.0.1" encoding="UTF-8">
-
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
     <!--Greetings-->
     <category>
         <pattern>HELLO</pattern>
@@ -23,25 +23,34 @@
     <category>
         <pattern>MY NAME IS *</pattern>
         <template>
-               Nice to meet you <set name="name"><star/></set>
+            Nice to meet you
+            <set name="name">
+                <star/>
+            </set>
         </template>
     </category>
     <category>
         <pattern>I AM *</pattern>
         <template>
-            <srai>MY NAME IS <star/></srai>
+            <srai>MY NAME IS
+                <star/>
+            </srai>
         </template>
     </category>
     <category>
         <pattern>I'M *</pattern>
         <template>
-               <srai>MY NAME IS <star/></srai>
+            <srai>MY NAME IS
+                <star/>
+            </srai>
         </template>
     </category>
     <category>
         <pattern>YOU CAN CALL ME *</pattern>
         <template>
-               <srai>MY NAME IS <star/></srai>
+            <srai>MY NAME IS
+                <star/>
+            </srai>
         </template>
     </category>
 
@@ -49,9 +58,12 @@
         <pattern>WHAT IS MY NAME</pattern>
         <template>
             <random>
-                <li>You are <get name="name"/>.</li>
-                <li>You're <get name="name"/>.</li>
-                <li>Your name is <get name="name"/>.</li>
+                <li>You are<get name="name"/>.
+                </li>
+                <li>You're<get name="name"/>.
+                </li>
+                <li>Your name is<get name="name"/>.
+                </li>
             </random>
         </template>
     </category>
@@ -84,22 +96,22 @@
 
     <category>
         <pattern>I WORK AS A *</pattern>
-            <template>
-                That is a hard work you do as <set name="job"><star/></set>
-            </template>
+        <template>
+            That is a hard work you do as <set name="job"><star/></set>
+        </template>
     </category>
 
     <category>
-        <pattern>WHERE DO I WORK?</pattern>
+        <pattern>WHERE DO I WORK</pattern>
         <template>
             You work at <get name="workplace"/>.
         </template>
     </category>
 
     <category>
-        <pattern>WHAT IS MY POSITION?</pattern>
+        <pattern>WHAT IS MY POSITION</pattern>
         <template>
-            You work as a <get name="job"/>
+            You work as a <get name="job"/>.
         </template>
     </category>
 
@@ -127,17 +139,17 @@
     </category>
 
     <category>
-        <pattern>HOW OLD AM I?</pattern>
+        <pattern>HOW OLD AM I</pattern>
         <template>
-            Good that you are <set name="age"><star/></set> years old.
+            <random>
+                <li>Good that you are <get name="age"/> years old.</li>
+                <li>You are <get name="age"/> years old.</li>
+            </random>
         </template>
     </category>
-
     <category>
         <pattern>WHAT IS MY AGE</pattern>
-        <template>
-            You are <get name="age"/> years old.
-        </template>
+        <template><srai>HOW OLD AM I</srai></template>
     </category>
 
     <!--Farewell-->
