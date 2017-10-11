@@ -27,6 +27,8 @@ sessions = {unknown: current_session_id}
 users = dict()
 current_user = unknown
 
+age_fmt = "AGE BETWEEN {} AND {}"
+
 # initialize kernel and paths
 kernel = aiml.Kernel()
 kernel.setPredicate("name", unknown, current_session_id)
@@ -162,8 +164,8 @@ def process_response(answer):
     print(bot_str + answer)
 
 
-def process_age(age):
-    pass
+def process_age(lower_limit, upper_limit):
+    return aiml_response(age_fmt.format(lower_limit, upper_limit))
 
 
 if __name__ == '__main__':

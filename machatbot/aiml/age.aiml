@@ -22,4 +22,20 @@
         </template>
     </category>
 
+    <category>
+        <pattern>* OLD *</pattern>
+        <template>
+            |exec(process_age(0, 25))|
+        </template>
+    </category>
+
+    <category>
+        <pattern>AGE BETWEEN 0 AND 25</pattern>
+        <template>
+            <random>
+                <li>I am too young too die?</li>
+            </random>
+        </template>
+    </category>
+
 </aiml>
